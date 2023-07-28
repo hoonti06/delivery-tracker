@@ -24,4 +24,12 @@ public class UserDeliveryInfo {
     return deliveryCompany;
   }
 
+  @Override
+  public String toString() {
+    return "UserDeliveryInfo{" +
+            "userId=" + userId +
+            ", trackingNumber='" + trackingNumber + '\'' +
+            ", deliveryCompany=" + deliveryCompany.getNameKr() +
+            '}';
+  }
 }

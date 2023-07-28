@@ -30,13 +30,8 @@ public class LotteGlogisTrackedDelivery implements TrackedDelivery {
 
   @Override
   public DeliveryLastStatus getLastStatus() {
-    return parseStatus();
-  }
-
-  private DeliveryLastStatus parseStatus() {
     Document doc = getDocument();
-    return new LotteGlogisParsedDocument(doc)
-        .getLastStatus();
+    return new LotteGlogisParsedDocument(doc).getLastStatus();
   }
 
   private Document getDocument() {
@@ -44,7 +39,7 @@ public class LotteGlogisTrackedDelivery implements TrackedDelivery {
       Connection.Response response = connection.execute();
       return response.parse();
     } catch (IOException e) {
-      throw new DeliveryParsingFailException(trackingNumber, e);
+      throw new DeliveryParsingFailException("예외 발생", e);
     }
   }
 }

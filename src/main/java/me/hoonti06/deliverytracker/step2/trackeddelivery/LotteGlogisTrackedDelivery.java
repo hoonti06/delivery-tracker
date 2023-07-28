@@ -33,7 +33,7 @@ public class LotteGlogisTrackedDelivery implements TrackedDelivery {
 
       return response.parse();
     } catch (IOException e) {
-      throw new DeliveryParsingFailException(trackingNumber, e);
+      throw new DeliveryParsingFailException("IO 예외 발생", e);
     }
   }
 }

@@ -8,4 +8,8 @@ public enum DeliveryCompany {
   DeliveryCompany(final String nameKr) {
     this.nameKr = nameKr;
   }
+
+  public String getNameKr() {
+    return nameKr;
+  }
 }

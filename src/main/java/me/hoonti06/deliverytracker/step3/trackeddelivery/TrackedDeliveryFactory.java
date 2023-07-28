@@ -30,7 +30,7 @@ public class TrackedDeliveryFactory {
       );
     }
 
-    throw new RuntimeException(String.format("지원하지 않는 타입: %s",
+    throw new IllegalArgumentException(String.format("지원하지 않는 타입: %s",
         userDeliveryInfo.getDeliveryCompany().name()));
   }
 }

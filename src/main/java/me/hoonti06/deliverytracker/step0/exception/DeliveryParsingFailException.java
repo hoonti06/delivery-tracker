@@ -18,8 +18,8 @@ public class DeliveryParsingFailException extends RuntimeException {
     this.userDeliveryInfo = userDeliveryInfo;
   }
 
-  public UserDeliveryInfo getUserDeliveryInfo() {
-    return userDeliveryInfo;
+  @Override
+  public String getMessage() {
+    return String.format("userInfo : %s, message : %s", userDeliveryInfo , super.getMessage());
   }
-
 }
