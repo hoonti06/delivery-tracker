@@ -12,7 +12,7 @@ public class DeliveryLastStatus {
     this.time = time;
   }
 
-  public DeliveryStatus getDeliveryStatusV2() {
+  public DeliveryStatus getDeliveryStatus() {
     return deliveryStatus;
   }
 
